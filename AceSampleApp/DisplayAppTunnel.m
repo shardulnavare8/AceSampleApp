@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://internal.airwlab.com"]];
+   // webViewAppTunnel.scalesPageToFit = YES;
+   // webViewAppTunnel.autoresizesSubviews = YES;
+   // webViewAppTunnel.frame = self.view.bounds;
+    [webViewAppTunnel loadRequest:request];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +40,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+@synthesize webViewAppTunnel;
 
 @end

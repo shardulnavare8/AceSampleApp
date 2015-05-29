@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4AC7431B17E9DC00D8818B /* ValidateSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4AC7421B17E9DC00D8818B /* ValidateSecurityPolicy.m */; };
 		1A6E5C8D1B14FF6000DADF14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E5C8C1B14FF6000DADF14 /* main.m */; };
 		1A6E5C901B14FF6000DADF14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E5C8F1B14FF6000DADF14 /* AppDelegate.m */; };
 		1A6E5C931B14FF6000DADF14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E5C921B14FF6000DADF14 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A4AC7411B17E9DC00D8818B /* ValidateSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateSecurityPolicy.h; sourceTree = "<group>"; };
+		1A4AC7421B17E9DC00D8818B /* ValidateSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateSecurityPolicy.m; sourceTree = "<group>"; };
 		1A6E5C871B14FF6000DADF14 /* AceSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AceSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6E5C8B1B14FF6000DADF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A6E5C8C1B14FF6000DADF14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,18 +90,20 @@
 		1A6E5C891B14FF6000DADF14 /* AceSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				1A4AC7411B17E9DC00D8818B /* ValidateSecurityPolicy.h */,
+				1A4AC7421B17E9DC00D8818B /* ValidateSecurityPolicy.m */,
 				1A6E5C8E1B14FF6000DADF14 /* AppDelegate.h */,
 				1A6E5C8F1B14FF6000DADF14 /* AppDelegate.m */,
 				1A6E5C911B14FF6000DADF14 /* ViewController.h */,
 				1A6E5C921B14FF6000DADF14 /* ViewController.m */,
+				1A7230E31B16745F00CA59E1 /* DisplayAppTunnel.h */,
+				1A7230E41B16745F00CA59E1 /* DisplayAppTunnel.m */,
 				1A6E5C941B14FF6000DADF14 /* Main.storyboard */,
 				1A6E5CB01B15244A00DADF14 /* DisplayAppConfig.h */,
 				1A6E5CB11B15244A00DADF14 /* DisplayAppConfig.m */,
 				1A6E5C971B14FF6000DADF14 /* Images.xcassets */,
 				1A6E5C991B14FF6000DADF14 /* LaunchScreen.xib */,
 				1A6E5C8A1B14FF6000DADF14 /* Supporting Files */,
-				1A7230E31B16745F00CA59E1 /* DisplayAppTunnel.h */,
-				1A7230E41B16745F00CA59E1 /* DisplayAppTunnel.m */,
 			);
 			path = AceSampleApp;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				1A6E5C931B14FF6000DADF14 /* ViewController.m in Sources */,
 				1A6E5C901B14FF6000DADF14 /* AppDelegate.m in Sources */,
 				1A6E5CB21B15244A00DADF14 /* DisplayAppConfig.m in Sources */,
+				1A4AC7431B17E9DC00D8818B /* ValidateSecurityPolicy.m in Sources */,
 				1A7230E51B16745F00CA59E1 /* DisplayAppTunnel.m in Sources */,
 				1A6E5C8D1B14FF6000DADF14 /* main.m in Sources */,
 			);

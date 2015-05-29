@@ -35,7 +35,8 @@
 -(IBAction)doneToViewControllerFromAppTunnel:(UIStoryboardSegue *)segue {
 }
 
-
+-(IBAction)doneToViewControllerFromSecurityPolicy:(UIStoryboardSegue *)segue {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

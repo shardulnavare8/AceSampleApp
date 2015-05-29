@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DisplayAppTunnel : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *webViewAppTunnel;
 
 @end
