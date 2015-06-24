@@ -10,6 +10,7 @@
 
 @interface DisplayAppConfig : UITableViewController
 
+//extern NSNumber *isSecurityPolicyEnabled;
 
 
 @end

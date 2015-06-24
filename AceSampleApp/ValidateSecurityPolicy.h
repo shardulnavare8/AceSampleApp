@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ValidateSecurityPolicy : UIViewController
+@interface ValidateSecurityPolicy : UIViewController<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webViewSecurityPolicy;
 @end

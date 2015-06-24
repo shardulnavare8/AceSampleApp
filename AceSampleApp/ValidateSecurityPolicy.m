@@ -7,6 +7,7 @@
 //
 
 #import "ValidateSecurityPolicy.h"
+#import "DisplayAppConfig.h"
 
 @interface ValidateSecurityPolicy ()
 
@@ -14,15 +15,31 @@
 
 @implementation ValidateSecurityPolicy
 
+static NSString * const kConfigurationKey = @"com.apple.configuration.managed";
+static NSString * const kConfigurationSecurityPolicy = @"Security Policy";
+
+
+NSNumber *isSecurityPolicyEnabled;
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.google.com/#q=airwatch"]];
-    // webViewAppTunnel.scalesPageToFit = YES;
-    // webViewAppTunnel.autoresizesSubviews = YES;
-    // webViewAppTunnel.frame = self.view.bounds;
     [webViewSecurityPolicy loadRequest:request];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuShown) name:UIMenuControllerDidShowMenuNotification object:nil];
+}
 
+-(void) menuShown {
+    NSDictionary *serverConfig = [[NSUserDefaults standardUserDefaults] dictionaryForKey:kConfigurationKey];
+    isSecurityPolicyEnabled = serverConfig[kConfigurationSecurityPolicy];
+//    isSecurityPolicyEnabled = [NSNumber numberWithBool:TRUE];
+    if ([isSecurityPolicyEnabled boolValue] == YES) {
+        [webViewSecurityPolicy setUserInteractionEnabled:NO];
+        [webViewSecurityPolicy setUserInteractionEnabled:YES];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,21 +48,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    // Disable user selection
-    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
-    // Disable callout
-    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @synthesize webViewSecurityPolicy;
 @end
